@@ -125,11 +125,11 @@
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
 
-    <select name="source">
-      <option>How did you contact me?</option>
-      <option>LinkedIn</option>
-      <option>Email</option>
-      <option>Instagram</option>
+    <select name="source" required>
+      <option value="">How did you contact me?</option>
+      <option value="LinkedIn">LinkedIn</option>
+      <option value="Email">Email</option>
+      <option value="Instagram">Instagram</option>
     </select>
 
     <textarea name="message" placeholder="Your Message" required></textarea>
@@ -137,6 +137,7 @@
     <button class="send" type="submit">Send Message 🚀</button>
   </form>
 </section>
+
 
 <!-- ===== FOOTER ===== -->
 <footer>
@@ -146,6 +147,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
