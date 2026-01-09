@@ -1,115 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rutuja Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Rutuja Mokashi | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- AOS Animation CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- CSS file -->
-    <link rel="stylesheet" href="style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navigation -->
-<nav>
-    <div class="nav-left">
-        <a href="#home">Home</a>
-        <br><a href="#about">About</a>
-       <br> <a href="#skills">Skills</a>
-        <br><a href="#projects">Projects</a>
-        <br><a href="#contact">Contact</a>
-    </div>
-    <button id="theme-toggle">🌙</button>
-</nav>
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="logo">🌸 Rutuja Mokashi</div>
+  <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+</header>
 
-<!-- Home Section -->
-<section id="home" class="section">
-    <div class="home-content" data-aos="fade-down">
-        <h1 id="typed-text"></h1>
-        <p>Web Developer | Programmer</p>
-        <a href="#projects" class="btn">View Projects</a>
-    </div>
+<!-- ===== MOBILE MENU ===== -->
+<div id="menu" class="menu">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ===== HOME ===== -->
+<section id="home" class="section hero">
+  <img src="profile.jpg.jpeg" alt="Profile Photo" class="profile">
+  <h1>Hi, I'm Rutuja Mokashi 🌻</h1>
+  <p>Computer Engineering Student | Web Developer</p>
 </section>
 
-<!-- About Section -->
-<section id="about" class="section" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>
-       I am a 3rd-year Computer Engineering student passionate about web development and programming. I enjoy building responsive websites and web applications using HTML, CSS, JavaScript, and exploring backend technologies. I love solving problems through coding and creating user-friendly, efficient software projects.
-    </p>
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section">
+  <h2>👤 About Me</h2>
+  <p>
+   <p> Name: Rutuja Ramakant Mokashi</p>   
+    <p>DOB-6th December 2005</p>
+    <p>Email: rutujamokashi1357@gmail.com</p>
+    <p>Location:karjat,Maharashtra</p><br><br><br>
+    <h2>Introduction</h2>
+    <p>I am a 3rd-year Computer Engineering student who enjoys turning ideas into functional and visually engaging digital experiences. I am passionate about web development and AI-driven applications, with a strong focus on building user-friendly, real-world solutions. Through hands-on projects, I continuously explore new technologies, strengthen my problem-solving skills, and apply core computer engineering concepts such as data structures, algorithms, and software development practices. I am eager to grow as a developer by working on innovative projects that combine creativity, logic, and technology.</p>
+  </p>
+  </p></p>
+  </p>
 </section>
 
-<!-- Skills Section -->
-<section id="skills" class="section" data-aos="fade-up">
-    <h2>My Skills</h2>
-    <div class="skills-container">
-
-        <div class="skill-circle">
-            <div class="circle" data-percentage="90">
-                <span>HTML</span>
-            </div>
-        </div>
-
-        <div class="skill-circle">
-            <div class="circle" data-percentage="80">
-                <span>CSS</span>
-            </div>
-        </div>
-
-        <div class="skill-circle">
-            <div class="circle" data-percentage="70">
-                <span>JavaScript</span>
-            </div>
-        </div>
-
-    </div>
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="section">
+  <h2>💻 Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Java</div>
+    <div class="skill">C</div>
+    <div class="skill">Git & GitHub</div>
+  </div>
 </section>
 
 
-<!-- Projects Section -->
-<section id="projects" class="section" data-aos="fade-up">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-        <div class="project-card" data-aos="zoom-in">
-            <img src="images/project1.png" alt="Portfolio Website">
-            <h3>Portfolio Website</h3>
-            <p>Personal portfolio using HTML, CSS & JS</p>
-        </div>
 
-        <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
-            <img src="images/project2.png" alt="Student Management">
-            <h3>Student Management</h3>
-            <p>Java-based mini project</p>
-        </div>
+<!-- ===== PROJECT MODAL ===== -->
+<section id="projects" class="section">
+  <h2>🚀 Projects</h2>
 
-        <!-- Add more projects here -->
-    </div>
+  <div class="project" onclick="openModal('task')">
+    Task Manager App
+  </div>
+
+  <div class="project" onclick="openModal('chatbot')">
+    AI Chatbot – Mitra
+  </div>
+
+  <div class="project" onclick="openModal('email')">
+    Email Automation System
+  </div>
+
+  <div class="project" onclick="openModal('student')">
+    Student Result Management System
+  </div>
+
+  <div class="project" onclick="openModal('weather')">
+    Weather Forecast Web App
+  </div>
+
+ 
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="section" data-aos="fade-up">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:rutuja@email.com">rutuja@email.com</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-    <a href="resume.pdf" download class="btn">Download Resume</a>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education" class="section">
+  <h2>🎓 Education</h2>
+
+  <div class="edu-card">
+    <h3>B.E. Computer Engineering (2023–2027)</h3>
+    <p>Pillai HOC College of Engineering & Technology</p>
+    
+  </div>
+
+  <div class="edu-card">
+    <h3>HSC (2021–2023)</h3>
+    <p>CHM college ,Ulhasnagar</p>
+    <p>Percentage: 78.00%</p>
+  </div>
+
+  <div class="edu-card">
+    <h3>SSC (2020–2021)</h3>
+    <p>Sharda Mandir,Karjat</p>
+    <p>Percentage: 98.40%</p>
+  </div>
 </section>
 
-<!-- Footer -->
-<footer class="section">
-    <p>&copy; 2026 Rutuja Mokashi</p>
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section">
+  <h2>📩 Contact Me</h2>
+
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+
+  <select>
+    <option>How did you contact me?</option>
+    <option>LinkedIn</option>
+    <option>Email</option>
+    <option>Instagram</option>
+  </select>
+
+  <textarea placeholder="Your Message"></textarea>
+
+  <button class="send">Send Message 🚀</button>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  © 2026 Rutuja Mokashi | All Rights Reserved
 </footer>
 
-<!-- Scripts -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
